@@ -1,0 +1,39 @@
+body {
+  height: 100%;
+      background-color: #869EA3;
+      background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+                        transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+                        transparent 75%, transparent);
+      background-size: 400px 400px;
+}
+
+.container {
+  margin-top:100px;
+}
+
+.inputbar {
+  width:100%;
+  height:40px;
+  background-color:#999;
+  text-align:center;
+  font-variant:small-caps;
+  line-height:40px;
+  color:#fff;
+  font-size:20px;
+  border-radius:5px;
+  margin-top:10px;
+  cursor:pointer;
+}
+
+.inputgroup:first-child .inputbar {
+  margin:0;
+}
+
+.inputcontent {
+  display:none;
+  padding-top:10px;
+}
+
+#subclassgroup {
+  display:none;
+}
