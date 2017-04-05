@@ -14,9 +14,8 @@
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Create <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="?p=createitem">Create Item</a></li>
-          <li><a href="?p=createnpc">Create Npc</a></li>
-          <li><a href="#">Create Quest</a></li>
+          <li><a href="?p=createnpc">Create Creature</a></li>
+          <li><a href="?p=npcvendor">Create Vendor</a></li>
         </ul>
       </li>
       <li><a href="#">How to Use</a></li>

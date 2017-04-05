@@ -98,6 +98,9 @@ $stattypes = "
               <input type="text" class="form-control" name="name" placeholder="Name">
             </div>
             <div class="form-group">
+              <input type="text" class="form-control" name="desc" placeholder="Description">
+            </div>
+            <div class="form-group">
               <input type="text" class="form-control" name="display" placeholder="DisplayID">
             </div>
             <div class="form-group">
@@ -234,12 +237,162 @@ $stattypes = "
                   <?php echo $stattypes; ?>
                 </select>
               </div>
+
             </div>
           </div>
-
-
-
         </div>
+
+        <div class="clearfix"></div>
+
+        <div class="inputgroup">
+          <div class="inputbar">Weapon Info</div>
+          <div class="inputcontent">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <input type="text" name="dps" class="form-control" placeholder="Damage Per Second">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="range" placeholder="Bow Range">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <input type="text" class="form-control" name="delay" placeholder="Delay">
+              </div>
+              <select name="ammo" class="form-control">
+                <option value='0' selected hidden disabled>Ammo</option>
+                <option value="2">Arrows</option>
+                <option value="3">Bullets</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="inputgroup">
+          <div class="inputbar">Spells</div>
+          <div class="inputcontent">
+            <div class="col-sm-3">
+              <div class="form-group">
+                <input type="text" name="spellid1" class="form-control" placeholder="SpellId 1">
+              </div>
+              <div class="form-group">
+                <select name="spelltrig1" class="form-control">
+                  <option value="0" selected hidden disabled>Trigger 1</option>
+                  <option value="0">Use</option>
+                  <option value="1">On Equip</option>
+                  <option value="2">Chance on Hit</option>
+                  <option value="5">Use with No Delay</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" name="spellcharge1" class="form-control" placeholder="Charges 1">
+              </div>
+              <div class="form-group">
+                <input type="text" name="spellppm1" class="form-control" placeholder="PPMRate 1">
+              </div>
+              <div class="form-group">
+                <input type="text" name="spellcd1" class="form-control" placeholder="SpellCD 1">
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="form-group">
+                <input type="text" name="spellid2" class="form-control" placeholder="SpellId 2">
+              </div>
+              <div class="form-group">
+                <select name="spelltrig2" class="form-control">
+                  <option value="0" selected hidden disabled>Trigger 2</option>
+                  <option value="0">Use</option>
+                  <option value="1">On Equip</option>
+                  <option value="2">Chance on Hit</option>
+                  <option value="5">Use with No Delay</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" name="spellcharge2" class="form-control" placeholder="Charges 2">
+              </div>
+              <div class="form-group">
+                <input type="text" name="spellppm2" class="form-control" placeholder="PPMRate 2">
+              </div>
+              <div class="form-group">
+                <input type="text" name="spellcd2" class="form-control" placeholder="SpellCD 2">
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="form-group">
+                <input type="text" name="spellid3" class="form-control" placeholder="SpellId 3">
+              </div>
+              <div class="form-group">
+                <select name="spelltrig3" class="form-control">
+                  <option value="0" selected hidden disabled>Trigger 3</option>
+                  <option value="0">Use</option>
+                  <option value="1">On Equip</option>
+                  <option value="2">Chance on Hit</option>
+                  <option value="5">Use with No Delay</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" name="spellcharge3" class="form-control" placeholder="Charges 3">
+              </div>
+              <div class="form-group">
+                <input type="text" name="spellppm3" class="form-control" placeholder="PPMRate 3">
+              </div>
+              <div class="form-group">
+                <input type="text" name="spellcd3" class="form-control" placeholder="SpellCD 3">
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="form-group">
+                <input type="text" name="spellid4" class="form-control" placeholder="SpellId 4">
+              </div>
+              <div class="form-group">
+                <select name="spelltrig4" class="form-control">
+                  <option value="0" selected hidden disabled>Trigger 4</option>
+                  <option value="0">Use</option>
+                  <option value="1">On Equip</option>
+                  <option value="2">Chance on Hit</option>
+                  <option value="5">Use with No Delay</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" name="spellcharge4" class="form-control" placeholder="Charges 4">
+              </div>
+              <div class="form-group">
+                <input type="text" name="spellppm4" class="form-control" placeholder="PPMRate 4">
+              </div>
+              <div class="form-group">
+                <input type="text" name="spellcd4" class="form-control" placeholder="SpellCD 4">
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <input type="text" name="spellid5" class="form-control" placeholder="SpellId 5">
+              </div>
+              <div class="form-group">
+                <select name="spelltrig5" class="form-control">
+                  <option value="0" selected hidden disabled>Trigger 5</option>
+                  <option value="0">Use</option>
+                  <option value="1">On Equip</option>
+                  <option value="2">Chance on Hit</option>
+                  <option value="5">Use with No Delay</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" name="spellcharge5" class="form-control" placeholder="Charges 5">
+              </div>
+              <div class="form-group">
+                <input type="text" name="spellppm5" class="form-control" placeholder="PPMRate 5">
+              </div>
+              <div class="form-group">
+                <input type="text" name="spellcd5" class="form-control" placeholder="SpellCD 5">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="clearfix"></div>
+
         <input type="submit" style="display:block;margin:10px auto 0 auto;" class="btn btn-success" value="Create Item">
       </form>
     </div>

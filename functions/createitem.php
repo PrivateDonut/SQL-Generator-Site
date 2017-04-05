@@ -1,13 +1,12 @@
 <?php
-// Randomly generates name for sql file
 function generateRandomString($length = 10) {
     return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
 }
 
 $name = "../files/".md5(generateRandomString()).".sql";
+
 $file = fopen($name, "w") or die("Unable to open file!");
 
-// Inputs values from "createitem.php"
 if(empty($_POST['entry'])) { $entry = 0; }else{ $entry = $_POST['entry'];}
 if(empty($_POST['class'])) { $class = 0; }else{ $class = $_POST['class'];}
 if(empty($_POST['subclass'])) { $subclass = 0; }else{ $subclass = $_POST['subclass'];}
@@ -33,13 +32,42 @@ if(empty($_POST['statval7'])) { $statval7 = 0; }else{ $statval7 = $_POST['statva
 if(empty($_POST['statval8'])) { $statval8 = 0; }else{ $statval8 = $_POST['statval8'];}
 if(empty($_POST['statval9'])) { $statval9 = 0; }else{ $statval9 = $_POST['statval9'];}
 if(empty($_POST['statval10'])) { $statval10 = 0; }else{ $statval10 = $_POST['statval10'];}
+if(empty($_POST['ammo'])) { $ammo = 0; }else{ $ammo = $_POST['ammo'];}
+if(empty($_POST['range'])) { $range = 0; }else{ $range = $_POST['range'];}
+if(empty($_POST['delay'])) { $delay = 0; }else{ $delay = $_POST['delay'];}
+if(empty($_POST['spellid1'])) { $spellid1 = 0; }else{ $spellid1 = $_POST['spellid1'];}
+if(empty($_POST['spellid2'])) { $spellid2 = 0; }else{ $spellid2 = $_POST['spellid2'];}
+if(empty($_POST['spellid3'])) { $spellid3 = 0; }else{ $spellid3 = $_POST['spellid3'];}
+if(empty($_POST['spellid4'])) { $spellid4 = 0; }else{ $spellid4 = $_POST['spellid4'];}
+if(empty($_POST['spellid5'])) { $spellid5 = 0; }else{ $spellid5 = $_POST['spellid5'];}
+if(empty($_POST['spelltrig1'])) { $spelltrig1 = 0; }else{ $spelltrig1 = $_POST['spelltrig1'];}
+if(empty($_POST['spelltrig2'])) { $spelltrig2 = 0; }else{ $spelltrig2 = $_POST['spelltrig2'];}
+if(empty($_POST['spelltrig3'])) { $spelltrig3 = 0; }else{ $spelltrig3 = $_POST['spelltrig3'];}
+if(empty($_POST['spelltrig4'])) { $spelltrig4 = 0; }else{ $spelltrig4 = $_POST['spelltrig4'];}
+if(empty($_POST['spelltrig5'])) { $spelltrig5 = 0; }else{ $spelltrig5 = $_POST['spelltrig5'];}
 
-// text = sql query using the information from createitem.php
-$text = "INSERT INTO item_template (entry, class, subclass, name, displayid, inventoryType, StatsCount, stat_type1, stat_type2, stat_type3, stat_type4, stat_type5, stat_type6, stat_type7, stat_type8, stat_type9, stat_type10, stat_value1, stat_value2, stat_value3, stat_value4, stat_value5, stat_value6, stat_value7, stat_value8, stat_value9, stat_value10)
-VALUES ($entry, $class, $subclass, '" . $_POST['name'] . "', $display, $invtype, 10, $stattype1, $stattype2, $stattype3, $stattype4, $stattype5, $stattype6, $stattype7, $stattype8, $stattype9, $stattype10, $statval1, $statval2, $statval3, $statval4, $statval5, $statval6, $statval7, $statval8, $statval9, $statval10);";
+$dps = $_POST['dps'];
+
+if($class == 2) {
+  $dmg_max1 = "400";
+  $dmg_min1 = "200";
+  $speed = $_POST['delay']/1000;
+  $variance = ($dmg_max1-$dmg_min1)/2;
+  $targetdmg = ($dps*$speed);
+  $min = round($targetdmg - $variance);
+  $max = round($targetdmg + $variance);
+  $avghit = ($max + $min)/2;
+  $resultdps = ($min+$max)/2/$speed;
+}else{
+  $min = 0;
+  $max = 0;
+}
+
+$text = "INSERT INTO item_template (entry, class, subclass, name, displayid, inventoryType, StatsCount, stat_type1, stat_type2, stat_type3, stat_type4, stat_type5, stat_type6, stat_type7, stat_type8, stat_type9, stat_type10, stat_value1, stat_value2, stat_value3, stat_value4, stat_value5, stat_value6, stat_value7, stat_value8, stat_value9, stat_value10, dmg_min1, dmg_max1, delay, RangedModRange, ammo_type, description, spellid_1, spellid_2, spellid_3, spellid_4, spellid_5, spelltrigger_1, spelltrigger_2, spelltrigger_3, spelltrigger_4, spelltrigger_5)
+VALUES ($entry, $class, $subclass, '" . $_POST['name'] . "', $display, $invtype, 10, $stattype1, $stattype2, $stattype3, $stattype4, $stattype5, $stattype6, $stattype7, $stattype8, $stattype9, $stattype10, $statval1, $statval2, $statval3, $statval4, $statval5, $statval6, $statval7, $statval8, $statval9, $statval10, $min,
+$max, $delay, $range, $ammo, '" . $_POST['desc'] . "', $spellid1, $spellid2, $spellid3, $spellid4, $spellid5, $spelltrig1, $spelltrig2, $spelltrig3, $spelltrig4, $spelltrig5);";
 fwrite($file, $text);
 
-// Auto download file after creating it above.
 header("Content-Description: File Transfer");
 header("Content-Type: application/octet-stream");
 header("Content-Disposition: attachment; filename='" . basename($name) . "'");
