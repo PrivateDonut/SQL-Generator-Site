@@ -1,6 +1,6 @@
 # SQL Generator Website
 
-## information
+## Information
 TODO: Write a project description
 
 ## Supported Cores
@@ -10,6 +10,6 @@ Currently only Trinity Core 3.3.5a is supported at the moment. We plan to add mu
 TODO: Describe the installation process
 
 ## Credits
-PrivateDonut
-Tok124
-CrazyDane
+1. PrivateDonut
+2. Tok124
+3. CrazyDane
