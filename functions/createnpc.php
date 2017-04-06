@@ -32,10 +32,6 @@ foreach ($_POST as $column => $columnValue) {
 
 $sql .= ");";
 
-
-// text = sql query using the information from createitem.php
-//$text = "INSERT INTO creature_template (entry, modelid1, modelid2, modelid3, modelid4, name, subname, minlevel, maxlevel, faction, npcflag, speed_walk, speed_run, scale, rank, dmgschool, BaseAttackTime, RangeAttackTime, unit_class, family, type, lootid, resistance1, resistance2, resistance3, resistance4, resistance5, resistance6, mingold, maxgold)
-//VALUES ($entry, $modelid1, $modelid2, $modelid3, $modelid4, '$cName', '$cSubname', $minlevel, $maxlevel, $faction, $calculate, $speed_walk, $speed_run, $scale, $rank, $dmgschool, $BaseAttackTime, $RangeAttackTime, $unit_class, $family, $type, $lootid, $resistance1, $resistance2, $resistance3, $resistance4, $resistance5, $resistance6, $mingold, $maxgold);";
 fwrite($file, $sql);
 header("Content-Description: File Transfer");
 header("Content-Disposition: attachment; filename='" . basename($name) . "'");
