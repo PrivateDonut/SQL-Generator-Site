@@ -1,6 +1,6 @@
 <?php
 
-define(RANDOM_STRING_LENGTH, 10);
+define("RANDOM_STRING_LENGTH", 10);
 
 // Randomly generates name for sql file
 function generateRandomString($length) {
@@ -11,8 +11,11 @@ $name = "../files/" . md5(generateRandomString(RANDOM_STRING_LENGTH)) . ".sql";
 $file = fopen($name, "w") or die("Unable to open file!");
 
 
-
-$checkbox = $_POST['checkbox_value'];
+if (!empty($_POST['checkbox_value'])) {
+    $checkbox = $_POST['checkbox_value'];
+} else {
+    $checkbox = 0;
+}
 
 $calculate = 0;
 
@@ -21,13 +24,11 @@ if (is_array($checkbox) || is_object($checkbox)) {
     foreach ($checkbox as $valueOfCheckbox) {
         $calculate += $valueOfCheckbox;
     }
-} else {
-    $calculate = "0";
 }
 
 
 // Inputs values from "createnpc.php"
-if (empty($_POST['entry'])) {
+if (empty($_POST['entry']) || !preg_match("/\D/", $_POST['entry'])) {
     $entry = 0;
 } else {
     $entry = $_POST['entry'];
