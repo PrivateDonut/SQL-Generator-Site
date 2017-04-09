@@ -6,7 +6,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="?p=home">TC SQLGen</a>
+    <a class="navbar-brand" href="?p=home">SQLGen</a>
   </div>
   <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav">
@@ -14,8 +14,9 @@
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Create <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="?p=createnpc">Create Creature</a></li>
-          <li><a href="?p=npcvendor">Create Vendor</a></li>
+          <li><a href="?p=item">Create Item</a></li>
+          <li><a href="?p=creature">Create Creature</a></li>
+          <li><a href="?p=vendor">Create Vendor</a></li>
         </ul>
       </li>
       <li><a href="#">How to Use</a></li>

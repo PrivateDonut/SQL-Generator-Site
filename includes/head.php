@@ -14,6 +14,10 @@
 
   <script type="text/javascript">
   $(document).ready(function(){
+    $(':checkbox.allhordes').change(function(){$(':checkbox.horde').prop('checked', this.checked);}); //Horde
+    $(':checkbox.allallies').change(function(){$(':checkbox.alliance').prop('checked', this.checked);}); //Alliance
+    $(':checkbox.allraces').change(function(){$(':checkbox.allowrace').prop('checked', this.checked);}); //All Races
+    $(':checkbox.allclasses').change(function(){$(':checkbox.class').prop('checked', this.checked);}); //All Classes
 
     $(".inputbar").click(function(){
       $(this).next().slideToggle();

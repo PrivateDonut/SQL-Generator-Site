@@ -27,7 +27,7 @@
               <input type="hidden" name="npcflag" class="form-control" value="129">
             </div>
 
-        <input type="submit" class="btn btn-success" style="display:block;margin:10px auto 0 auto;" value="Create Item">
+        <input type="submit" class="btn btn-success" style="display:block;margin:10px auto 0 auto;" value="Create Vendor">
       </form>
 
       </div>
