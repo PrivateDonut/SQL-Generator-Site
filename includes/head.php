@@ -12,13 +12,6 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-  <script>
-    var wowhead_tooltips = {
-      "colorlinks": true,
-      "iconizelinks": true,
-      "renamelinks": true
-    }
-  </script>
   <script type="text/javascript">
   $(document).ready(function(){
 
@@ -35,10 +28,6 @@
       }
     });
 
-  });
-
-  $('.openclose').click(function(){
-  $('#dispfinderbg').fadeToggle();
   });
   </script>
 </head>
