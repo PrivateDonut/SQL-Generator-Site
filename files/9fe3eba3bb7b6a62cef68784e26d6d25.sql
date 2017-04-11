@@ -1,0 +1,2 @@
+INSERT INTO creature_template (entry, modelid1, modelid2, modelid3, modelid4, name, subname, minlevel, maxlevel, faction, npcflag, speed_walk, speed_run, scale, rank, dmgschool, BaseAttackTime, RangeAttackTime, unit_class, family, type, lootid, resistance1, resistance2, resistance3, resistance4, resistance5, resistance6, mingold, maxgold)
+VALUES (0, 0, 0, 0, 0, 'Name Placement Here', 'Name Sub Placement Here', 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);

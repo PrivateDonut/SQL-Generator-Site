@@ -636,9 +636,8 @@ $stattypes = "
 
             </div>
 <!-- Resistance End -->
-
+          <input type="submit" style="display:block;margin:10px auto 0 auto;" class="btn btn-success" value="Create Item">
+        </form>
         </div>
-      <input type="submit" style="display:block;margin:10px auto 0 auto;" class="btn btn-success" value="Create Item">
-     </form>
   </div>
 </div>

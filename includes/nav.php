@@ -22,8 +22,8 @@
       <li><a href="#">How to Use</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="#" data-toggle="modal" style="outline:none;" data-target="#regModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#" data-toggle="modal" style="outline:none;" data-target="#loginModal"><span class="glyphicon glyphicon-user"></span> Login</a></li>
     </ul>
   </div>
 </div>
