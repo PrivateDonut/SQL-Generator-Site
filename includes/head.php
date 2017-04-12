@@ -130,3 +130,37 @@
     </div>
   </div>
 </div>
+
+<div id="modelModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">ModelID Finder Tool</h4>
+      </div>
+      <div class="modal-body">
+        <div id="searchformt">
+          <form action="functions/findmodel.php" method="GET">
+            <div class="form-group">
+              <input type="search" class="form-control" name="dispname" id="searchbarmodel" placeholder="Search by Item Name">
+            </div>
+          </form>
+        </div>
+        <div id="MyModelResult">
+          <table id="searchResultModel" style="width:100%;">
+            <tr class="tablerow">
+              <th>modelID</th>
+              <th>Name</th>
+              <th>EntryID</th>
+            </tr>
+          </table>
+          <script type="text/javascript" src="js/AJAXModelTool.js"></script>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

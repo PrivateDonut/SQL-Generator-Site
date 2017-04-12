@@ -5,9 +5,9 @@
       <?php
       if(isset($_GET['p'])) {
         if($_GET['p'] == "item") {
-          echo "<div id=\"dispmenu1\" data-toggle=\"modal\" style=\"outline:none;\" data-target=\"#dispModal\">DisplayID Finder</div>";
+          echo "<div id=\"dispmenu1\" data-toggle=\"modal\" style=\"outline:none;\" data-target=\"#dispModal\">Item DisplayID Finder</div>";
         }elseif($_GET['p'] == "creature") {
-          // do nothing yet
+          echo "<div id=\"dispmenu1\" data-toggle=\"modal\" style=\"outline:none;\" data-target=\"#modelModal\">Creature ModelID Finder</div>";
         }elseif($_GET['p'] == "vendor") {
           // do nothing yet
         }
