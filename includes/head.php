@@ -18,6 +18,7 @@
       "iconizelinks": true,
       "renamelinks": true
     }
+  </script>
   <script type="text/javascript">
   $(document).ready(function(){
     $(':checkbox.allhordes').change(function(){$(':checkbox.horde').prop('checked', this.checked);}); //Horde
