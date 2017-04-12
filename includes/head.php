@@ -11,7 +11,13 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
+  <script type="text/javascript" src="//wow.zamimg.com/widgets/power.js"></script>
+  <script>
+    var wowhead_tooltips = {
+      "colorlinks": true,
+      "iconizelinks": true,
+      "renamelinks": true
+    }
   <script type="text/javascript">
   $(document).ready(function(){
     $(':checkbox.allhordes').change(function(){$(':checkbox.horde').prop('checked', this.checked);}); //Horde
@@ -87,5 +93,40 @@
     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
     </div>
    </div>
+  </div>
+</div>
+
+
+<div id="dispModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">DisplayId Finder Tool</h4>
+      </div>
+      <div class="modal-body">
+        <div id="searchform">
+          <form action="functions/finditem.php" method="GET">
+            <div class="form-group">
+              <input type="search" class="form-control" name="dispname" id="searchbar" placeholder="Search by Item Name">
+            </div>
+          </form>
+        </div>
+        <div id="MyResult">
+          <table id="searchResult">
+            <tr class="tablerow">
+              <th>DisplayID</th>
+              <th>Name</th>
+              <th>EntryID</th>
+            </tr>
+          </table>
+          <script type="text/javascript" src="js/AJAXDispTool.js"></script>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>

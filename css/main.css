@@ -37,3 +37,55 @@ body {
 #subclassgroup {
   display:none;
 }
+
+.toolboxbg {
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  margin:auto;
+  box-sizing: border-box;
+  width:500px;
+  height:500px;
+  padding:20px;
+  background-color:#333;
+}
+
+.toolboxbg [type="search"] {
+  width:100%;
+  height:35px;
+  border:1px solid #999;
+  border-radius:5px;
+  box-sizing: border-box;
+  padding:0 10px;
+}
+
+#MyResult, #MyModelResult {
+  max-height:300px;
+  overflow-y:auto;
+  margin-top:50px;
+  background-color:#333;
+  box-sizing:border-box;
+  padding:10px;
+  border-radius:3px;
+}
+
+#searchResult, #searchResultModel {
+  width:100%;
+  color:#fff;
+}
+
+#searchform {
+  padding-top:40px;
+}
+
+.closetool {
+  width:30px;
+  height:30px;
+  background-color:red;
+  float:right;
+  margin-right:4px;
+  margin-top:4px;
+  cursor:pointer;
+}
