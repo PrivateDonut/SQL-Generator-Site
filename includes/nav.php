@@ -22,8 +22,12 @@
       <li><a href="#">How to Use</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#" data-toggle="modal" style="outline:none;" data-target="#regModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#" data-toggle="modal" style="outline:none;" data-target="#loginModal"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+    <?php  if(isset($_SESSION['username'])) {
+      echo "<li><a href=\"functions/logout.php\"><span class=\"glyphicon glyphicon-log-in\"></span> Logout</a></li>";
+      }else {
+      echo "<li><a href=\"#\" data-toggle=\"modal\" style=\"outline:none;\" data-target=\"#regModal\"><span class=\"glyphicon glyphicon-log-in\"></span> Signup</a></li>";
+      echo "<li><a href=\"#\" data-toggle=\"modal\" style=\"outline:none;\" data-target=\"#loginModal\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a></li>";
+    } ?>
     </ul>
   </div>
 </div>

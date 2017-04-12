@@ -24,7 +24,7 @@ if($stmt->num_rows > 0) {
     $stmt->bind_param("ss", $currentip, $user);
     if($stmt->execute()) {
     $_SESSION['username'] = $user;
-    header('location: ../?p=item');
+    header('location: ../?p=profile');
   }
  }
 }else{
